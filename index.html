@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>New Journey Global Consulting | Études à l’étranger (Canada • France • Italie)</title>
+<meta content="Accompagnement premium pour vos études à l’étranger: orientation, sélection des programmes, admission, préparation des documents et suivi. Tunisie. WhatsApp +216 54 101 100." name="description"/>
+<meta content="#01345E" name="theme-color"/>
+<meta content="New Journey Global Consulting" property="og:title"/>
+<meta content="Études à l’étranger avec un accompagnement premium (Canada, France, Italie)." property="og:description"/>
+<meta content="website" property="og:type"/>
+<!-- Luxury fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Sora:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      /* Palette (extrait du logo) */
+      --navy:#01345E;
+      --navy2:#0A2C4A;
+      --red:#B91218;
+      --white:#FFFFFF;
+
+      /* Neutres (tints du navy + blanc) */
+      --paper:#F6FAFF;
+      --line:#D6E3F0;
+      --ink:#071524;
+      --muted:#4F667D;
+
+      --shadow: 0 18px 50px rgba(1,52,94,.18);
+      --shadow2: 0 10px 24px rgba(1,52,94,.16);
+
+      --r16:16px;
+      --r18:18px;
+      --r24:24px;
+      --r28:28px;
+
+      --font-body:"Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --font-head:"Sora", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+*{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1100px 520px at 70% -10%, rgba(200,162,77,.12), transparent 55%),
+        radial-gradient(900px 520px at 10% 0%, rgba(2,53,94,.14), transparent 60%),
+        linear-gradient(180deg,#FFFFFF 0%, var(--bg) 60%, #EEF3F6 100%);
+      color:var(--ink);
+      font-family:"Manrope", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1160px,92vw);margin:0 auto}
+
+    .topline{
+      height:3px;
+      background:linear-gradient(90deg, var(--gold), rgba(200,162,77,0), var(--red));
+      opacity:.95;
+    }
+
+    header{
+      position:sticky;top:0;z-index:40;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.70);
+      border-bottom:1px solid rgba(7,26,43,.08);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:14px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:260px}
+    .logo{
+      width:42px;height:42px;border-radius:16px;
+      background:#fff;border:1px solid rgba(7,26,43,.10);
+      box-shadow:0 10px 18px rgba(11,18,32,.08);
+      overflow:hidden;display:grid;place-items:center;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover}
+    .brand .title{font-weight:800;letter-spacing:.2px;line-height:1.05}
+    .brand .subtitle{
+      font-size:12px;color:rgba(11,18,32,.62);margin-top:2px;
+      letter-spacing:.10em;text-transform:uppercase
+    }
+
+    nav{position:relative}
+    nav ul{
+      display:flex;gap:16px;list-style:none;padding:0;margin:0;align-items:center
+    }
+    nav a{
+      font-size:13px;color:rgba(11,18,32,.82);
+      padding:10px 10px;border-radius:14px;
+      transition:background .18s ease, transform .18s ease, color .18s ease;
+      white-space:nowrap
+    }
+    nav a:hover{background:rgba(7,26,43,.06);color:var(--navy);transform:translateY(-1px)}
+
+    .nav-cta{display:flex;align-items:center;gap:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:16px;font-weight:800;font-size:13px;
+      border:1px solid rgba(7,26,43,.14);
+      background:rgba(255,255,255,.9);
+      box-shadow:0 10px 18px rgba(11,18,32,.07);
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 14px 26px rgba(11,18,32,.12);border-color:rgba(7,26,43,.22)}
+    .btn.primary{
+      color:#fff;background:linear-gradient(135deg,var(--navy),#0C2A44);
+      border-color:rgba(7,26,43,.35);box-shadow:0 18px 36px rgba(7,26,43,.22)
+    }
+    .btn.gold{
+      color:#1A1410;background:linear-gradient(135deg,#F3E1B6,var(--gold));
+      border-color:rgba(200,162,77,.55);box-shadow:0 18px 36px rgba(200,162,77,.18)
+    }
+
+    .hamburger{
+      display:none;width:44px;height:44px;border-radius:16px;
+      border:1px solid rgba(7,26,43,.14);background:rgba(255,255,255,.9);
+      box-shadow:0 10px 18px rgba(11,18,32,.07)
+    }
+    .hamburger svg{width:22px;height:22px}
+
+    /* Hero */
+    .hero{padding:70px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
+    .badge{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(200,162,77,.35);
+      background:rgba(255,255,255,.72);
+      box-shadow:0 12px 28px rgba(11,18,32,.06);
+      font-weight:800;color:rgba(11,18,32,.78);font-size:12px;
+      letter-spacing:.10em;text-transform:uppercase;width:fit-content
+    }
+    .badge .spark{width:10px;height:10px;border-radius:99px;background:var(--gold);box-shadow:0 0 0 4px rgba(200,162,77,.18)}
+
+    h1{
+      font-family:"Playfair Display", ui-serif, Georgia, serif;
+      font-weight:700;font-size:clamp(36px,3.7vw,54px);
+      line-height:1.06;letter-spacing:-0.4px;margin:14px 0 12px;color:var(--navy)
+    }
+    .lead{font-size:16px;line-height:1.75;color:rgba(11,18,32,.74);margin:0 0 18px;max-width:62ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 18px}
+    .mini-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .proof{
+      padding:14px 14px;border-radius:18px;background:rgba(255,255,255,.75);
+      border:1px solid rgba(7,26,43,.10);
+      box-shadow:0 10px 22px rgba(11,18,32,.06);
+      font-weight:800;font-size:13px;color:rgba(11,18,32,.76)
+    }
+
+    .hero-card{
+      position:relative;border-radius:30px;padding:20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.66));
+      border:1px solid rgba(7,26,43,.10);box-shadow:var(--shadow);overflow:hidden;isolation:isolate
+    }
+    .hero-card:before{
+      content:"";position:absolute;inset:-2px;z-index:-1;opacity:.95;
+      background:
+        radial-gradient(540px 240px at 20% 0%, rgba(2,53,94,.18), transparent 58%),
+        radial-gradient(520px 240px at 90% 12%, rgba(200,162,77,.18), transparent 60%),
+        radial-gradient(520px 240px at 70% 90%, rgba(186,19,25,.09), transparent 58%);
+    }
+    .panel{
+      background:rgba(255,255,255,.74);border:1px solid rgba(7,26,43,.10);
+      border-radius:22px;padding:14px;box-shadow:var(--shadow2)
+    }
+    .hero-card h3{
+      margin:0 0 8px;font-size:14px;letter-spacing:.10em;text-transform:uppercase;color:rgba(7,26,43,.82)
+    }
+    .kpi{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .kpi .box{
+      border-radius:20px;padding:12px;background:rgba(255,255,255,.78);
+      border:1px solid rgba(7,26,43,.10);box-shadow:0 12px 20px rgba(11,18,32,.08)
+    }
+    .kpi .label{font-size:12px;color:rgba(11,18,32,.62);font-weight:800;margin-bottom:6px;letter-spacing:.10em;text-transform:uppercase}
+    .kpi .value{font-weight:900;color:var(--navy);letter-spacing:-0.2px}
+    .divider{height:1px;background:linear-gradient(90deg, rgba(7,26,43,0), rgba(7,26,43,.14), rgba(7,26,43,0));margin:14px 0}
+    .hero-note{margin-top:12px;font-size:13px;line-height:1.7;color:rgba(11,18,32,.72)}
+
+    section{padding:64px 0}
+    .section-head{display:grid;gap:10px;margin-bottom:22px}
+    .eyebrow{font-weight:900;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:rgba(7,26,43,.70)}
+    h2{
+      margin:0;font-family:"Playfair Display", ui-serif, Georgia, serif;font-weight:700;
+      font-size:clamp(26px,2.4vw,36px);letter-spacing:-0.2px;color:var(--navy)
+    }
+    .sub{margin:0;color:rgba(11,18,32,.72);line-height:1.75;max-width:78ch;font-size:15px}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .steps{display:grid;gap:12px}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.70));
+      border:1px solid rgba(7,26,43,.10);border-radius:28px;
+      box-shadow:var(--shadow2);padding:20px;
+      transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+      position:relative;overflow:hidden
+    }
+    .card:before{
+      content:"";position:absolute;inset:-2px;opacity:.65;pointer-events:none;
+      background:radial-gradient(520px 220px at 10% 0%, rgba(200,162,77,.14), transparent 60%);
+    }
+    .card>*{position:relative}
+    .card:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(11,18,32,.12);border-color:rgba(7,26,43,.16)}
+    .tag{
+      display:inline-flex;gap:10px;align-items:center;padding:9px 12px;border-radius:999px;
+      border:1px solid rgba(200,162,77,.40);background:rgba(255,255,255,.72);
+      font-weight:900;font-size:12px;color:rgba(11,18,32,.78);width:fit-content;margin-bottom:10px;
+      letter-spacing:.10em;text-transform:uppercase
+    }
+    .card h3{margin:0 0 8px;font-size:16px;letter-spacing:-0.15px;color:rgba(7,26,43,.92)}
+    .card p{margin:0;color:rgba(11,18,32,.72);line-height:1.7;font-size:14px}
+
+    .step{
+      display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:start;
+      padding:18px;border-radius:28px;border:1px solid rgba(7,26,43,.10);
+      background:linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.68));
+      box-shadow:var(--shadow2)
+    }
+    .step .num{
+      width:54px;height:54px;border-radius:22px;display:grid;place-items:center;
+      font-weight:950;color:var(--navy);
+      background:linear-gradient(135deg, rgba(200,162,77,.95), rgba(243,225,182,.9));
+      border:1px solid rgba(200,162,77,.55);box-shadow:0 18px 34px rgba(200,162,77,.18)
+    }
+    .step h3{margin:0 0 6px;font-size:16px;color:rgba(7,26,43,.92)}
+    .step p{margin:0;color:rgba(11,18,32,.72);line-height:1.7;font-size:14px}
+
+    details{
+      background:linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.70));
+      border:1px solid rgba(7,26,43,.10);border-radius:28px;padding:16px 18px;
+      box-shadow:var(--shadow2)
+    }
+    details + details{margin-top:12px}
+    summary{
+      cursor:pointer;font-weight:900;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;
+      color:rgba(7,26,43,.92)
+    }
+    summary::-webkit-details-marker{display:none}
+    .chev{width:18px;height:18px;transition:transform .18s ease;opacity:.7}
+    details[open] .chev{transform:rotate(180deg)}
+    .faq-body{margin-top:10px;color:rgba(11,18,32,.72);line-height:1.75;font-size:14px}
+
+    .contact-card{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;align-items:stretch}
+    .muted{color:rgba(11,18,32,.66)}
+    .line{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:12px 14px;border-radius:20px;border:1px solid rgba(7,26,43,.10);
+      background:rgba(255,255,255,.78);box-shadow:0 12px 20px rgba(11,18,32,.07);
+      font-size:14px
+    }
+
+    footer{padding:34px 0 72px;color:rgba(11,18,32,.68);font-size:13px}
+    .footer-inner{
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+      border-top:1px solid rgba(7,26,43,.10);padding-top:18px
+    }
+
+    .wa{
+      position:fixed;right:18px;bottom:18px;z-index:60;
+      display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;
+      background:linear-gradient(135deg,#1faa5b,#0f8f46);color:#fff;font-weight:900;
+      border:1px solid rgba(255,255,255,.22);box-shadow:0 18px 36px rgba(11,18,32,.20)
+    }
+    .wa svg{width:18px;height:18px;fill:currentColor}
+    .wa span{font-size:14px}
+
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .mini-proof{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .contact-card{grid-template-columns:1fr}
+      nav ul{
+        display:none;position:absolute;top:70px;left:4vw;right:4vw;
+        background:rgba(255,255,255,.92);border:1px solid rgba(7,26,43,.10);
+        border-radius:22px;padding:10px;box-shadow:var(--shadow)
+      }
+      nav ul.open{display:grid;gap:2px}
+      nav a{display:block;padding:12px 12px}
+      .hamburger{display:inline-grid;place-items:center}
+      .brand{min-width:auto}
+      .nav-cta{display:none}
+    }
+  
+
+/* -------- Pro refresh (logo palette + images + icons) -------- */
+body{font-family:var(--font-body); background: radial-gradient(800px 500px at 10% -10%, rgba(1,52,94,.08), transparent 60%), var(--paper); color:var(--ink);}
+h1,h2,h3{font-family:var(--font-head); letter-spacing:-0.02em;}
+.muted{color:var(--muted);}
+.eyebrow{letter-spacing:.14em;}
+.btn{border:1px solid rgba(1,52,94,.18); box-shadow:none;}
+.btn.primary{background:linear-gradient(180deg, var(--navy), var(--navy2)); border-color:rgba(1,52,94,.35);}
+.btn.accent{background:linear-gradient(180deg, var(--red), #8F0E13); border-color:rgba(185,18,24,.55);}
+.btn.ghost{background:transparent;}
+.ico{width:16px;height:16px;display:inline-block;color:var(--red);}
+.ico-btn{width:16px;height:16px;vertical-align:-3px;margin-right:8px;color:currentColor;}
+
+.tag{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(1,52,94,.07);border:1px solid rgba(1,52,94,.14);color:var(--navy2);font-weight:600}
+.tag .ico{color:var(--red);}
+
+.hero{position:relative; padding:84px 0 28px;}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(120deg, rgba(1,52,94,.92), rgba(1,52,94,.55)),
+    var(--hero-bg);
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.hero .container{position:relative;}
+.hero h1, .hero p, .hero .kpi .label{color:rgba(255,255,255,.92)}
+.hero .sub{color:rgba(255,255,255,.78)}
+.hero .card{background:rgba(255,255,255,.92); border-color:rgba(255,255,255,.35)}
+.hero .kpi .value{color:var(--navy2);}
+
+.card{border:1px solid rgba(1,52,94,.12);}
+.card:hover{transform:translateY(-3px);}
+
+.card.card-media{overflow:hidden}
+.card.card-media .media{position:relative; height:170px; border-bottom:1px solid rgba(1,52,94,.10)}
+.card.card-media .media img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05)}
+.card.card-media .flag{
+  position:absolute; left:14px; bottom:14px;
+  display:flex; align-items:center; gap:10px;
+  padding:8px 10px; border-radius:999px;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(1,52,94,.14);
+  box-shadow:0 12px 30px rgba(1,52,94,.18);
+  font-weight:700; color:var(--navy2);
+}
+.card.card-media .flag img{border-radius:4px; border:1px solid rgba(1,52,94,.18)}
+.card.card-media .content{padding:18px 18px 20px}
+.card.card-media .cta-row{margin-top:14px}
+
+.footer{border-top:1px solid rgba(1,52,94,.12)}
+.footer a{color:var(--navy)}
+.footer a:hover{color:var(--red)}
+
+@media (max-width:900px){
+  .hero{padding:70px 0 20px}
+  .hero::before{background-position:70% center;}
+  .card.card-media .media{height:150px;}
+}
+</style>
+</head>
+<body>
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-compass" viewbox="0 0 24 24">
+<path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+<path d="M14.7 9.3 12.9 13 9.3 14.7 11.1 11 14.7 9.3Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+</symbol>
+<symbol id="i-doc" viewbox="0 0 24 24">
+<path d="M7 3h7l3 3v15a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+<path d="M14 3v4a1 1 0 0 0 1 1h4" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+<path d="M8 12h8M8 16h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</symbol>
+<symbol id="i-folder" viewbox="0 0 24 24">
+<path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+</symbol>
+<symbol id="i-check" viewbox="0 0 24 24">
+<path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</symbol>
+<symbol id="i-calendar" viewbox="0 0 24 24">
+<path d="M7 3v3M17 3v3M4 8h16M6 6h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</symbol>
+<symbol id="i-plane" viewbox="0 0 24 24">
+<path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9L2 14v2l8-2.5V19l-2 1.5V22l3-1 3 1v-1.5L13 19v-5.5Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path>
+</symbol>
+<symbol id="i-whatsapp" viewbox="0 0 24 24">
+<path d="M20 11.6a8 8 0 0 1-12.3 6.8L4 19l.7-3.5A8 8 0 1 1 20 11.6Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M9.3 9.2c.2-.4.3-.4.5-.4h.5c.1 0 .3 0 .4.3l.6 1.4c.1.2.1.4 0 .6l-.3.5c-.1.1-.2.2 0 .4.2.3.8 1.3 1.9 1.9.2.1.3.1.4 0l.5-.3c.2-.1.4-.1.6 0l1.4.6c.3.1.3.3.3.4v.5c0 .2 0 .3-.4.5-.4.2-1.5.6-3.2-.1-1.8-.7-3.2-2.4-3.7-3.2-.5-.8-.2-2.1 0-2.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
+</symbol>
+<symbol id="i-facebook" viewbox="0 0 24 24">
+<path d="M14 8h2V5h-2a4 4 0 0 0-4 4v3H8v3h2v7h3v-7h2.2l.8-3H13V9a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
+</symbol>
+<symbol id="i-instagram" viewbox="0 0 24 24">
+<path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+<path d="M12 16a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+<path d="M17.5 6.5h.01" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</symbol>
+</svg>
+<div class="topline"></div>
+<header>
+<div class="container">
+<div class="nav">
+<a aria-label="Retour en haut" class="brand" href="#top">
+<div aria-hidden="true" class="logo"><img alt="Logo New Journey Global Consulting" src="assets/logo.png"/></div>
+<div>
+<div class="title">New Journey</div>
+<div class="subtitle">Global Consulting</div>
+</div>
+</a>
+<nav aria-label="Navigation principale">
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="hamburger" id="menuBtn">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+<ul id="menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#destinations">Destinations</a></li>
+<li><a href="#process">Méthode</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div aria-label="Appels à l'action" class="nav-cta">
+<a class="btn accent" href="#contact">Demande de rappel</a>
+<a class="btn primary" href="https://wa.me/21654101100" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico-btn"><use href="#i-whatsapp"></use></svg>WhatsApp</a>
+<a aria-label="Facebook" class="btn" href="https://www.facebook.com/newjourneyglobalconsul" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico-btn"><use href="#i-facebook"></use></svg>Facebook</a>
+<a aria-label="Instagram" class="btn" href="https://www.instagram.com/new_journey_global_consulting/" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico-btn"><use href="#i-instagram"></use></svg>Instagram</a>
+</div>
+</div>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="container">
+<div class="hero-grid">
+<div>
+<div class="badge"><span class="spark"></span> Accompagnement premium | Tunisie</div>
+<h1>Études à l’étranger, exécutées avec élégance et rigueur. 🌍</h1>
+<p class="lead">
+            Canada, France, Italie. Un seul objectif: bâtir un dossier cohérent, propre et convaincant.
+            Orientation, admission, préparation des documents et suivi étape par étape.
+          </p>
+<div class="hero-actions">
+<a class="btn accent" href="#contact">✨ Démarrer l’évaluation</a>
+<a class="btn primary" href="https://wa.me/21654101100?text=Bonjour%20New%20Journey%20Global%20Consulting%2C%20je%20veux%20une%20%C3%A9valuation%20gratuite%20pour%20%C3%A9tudier%20%C3%A0%20l%E2%80%99%C3%A9tranger.%20%0A%0A%C3%82ge%3A%20%0ANiveau%20d%E2%80%99%C3%A9tudes%3A%20%0AVille%3A%20%0ADestination%20(Canada%2FFrance%2FItalie)%3A%20%0ABudget%3A%20%0ARentr%C3%A9e%20(Janvier%2FSeptembre)%3A%20" rel="noopener" target="_blank">
+              WhatsApp (message prêt)
+            </a>
+</div>
+<div aria-label="Points forts" class="mini-proof">
+<div class="proof">✅ Clarté &amp; structure</div>
+<div class="proof">✅ Suivi réactif</div>
+<div class="proof">✅ Dossier premium</div>
+</div>
+</div>
+<aside aria-label="Aperçu rapide" class="hero-card">
+<div class="panel">
+<h3>Informations essentielles</h3>
+<div class="kpi">
+<div class="box">
+<div class="label">Destinations</div>
+<div class="value">Canada • France • Italie</div>
+</div>
+<div class="box">
+<div class="label">Contact</div>
+<div class="value">+216 54 101 100</div>
+</div>
+<div class="box">
+<div class="label">Contact</div>
+<div class="value">+216 55 629 627</div>
+</div>
+<div class="box">
+<div class="label">Disponibilité</div>
+<div class="value">Lun–Ven</div>
+</div>
+<div class="box">
+<div class="label">Horaires</div>
+<div class="value">9–13 • 14–17</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="hero-note">
+              ✨ <strong>Notre style:</strong> moins de bruit, plus de précision. On avance avec méthode, et on garde votre dossier impeccable.
+            </div>
+<div style="margin-top:14px; display:grid; gap:10px;">
+<a class="btn accent" href="#contact" style="width:100%;">✨ Réserver l’évaluation</a>
+<a class="btn" href="https://wa.me/21654101100" rel="noopener" style="width:100%;" target="_blank">💬 Ouvrir WhatsApp</a>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<section id="services">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Services</div>
+<h2>Une prise en charge complète, sans confusion.</h2>
+<p class="sub">On vous accompagne du choix du pays jusqu’aux dernières étapes avant départ. Simple, clair, efficace.</p>
+</div>
+<div class="grid-3">
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-compass"></use></svg><span>Orientation</span></div>
+<h3>Orientation &amp; stratégie</h3>
+<p>On définit votre objectif, votre budget et votre calendrier pour construire un plan réaliste.</p>
+</div>
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>Programmes</span></div>
+<h3>Sélection des programmes</h3>
+<p>On vous propose des options adaptées à votre profil, avec une logique claire et cohérente.</p>
+</div>
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>Admission</span></div>
+<h3>Admission &amp; inscription</h3>
+<p>Préparation, dépôt, suivi: on gère la partie opérationnelle proprement, jusqu’à la réponse.</p>
+</div>
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>Documents</span></div>
+<h3>Préparation des documents</h3>
+<p>Checklist, organisation, vérification: votre dossier devient lisible, complet et net.</p>
+</div>
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>️ Suivi</span></div>
+<h3>Suivi administratif</h3>
+<p>Un suivi régulier et réactif, avec des étapes claires et un timing maîtrisé.</p>
+</div>
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-plane"></use></svg><span>Départ</span></div>
+<h3>Préparation avant départ</h3>
+<p>Conseils pratiques et plan final: vous partez serein, avec une vision nette.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="destinations">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Destinations</div>
+<h2>Canada, France, Italie: trois options, un accompagnement premium.</h2>
+<p class="sub">On compare les programmes, budgets et délais, puis on construit un plan clair adapté à votre profil.</p>
+</div>
+<div class="grid-3">
+<div class="card card-media">
+<div class="media">
+<img alt="Étudiants au Canada" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="flag">
+<img alt="Drapeau du Canada" height="18" loading="lazy" src="assets/flags/ca.svg" width="24"/>
+<span>Canada</span>
+</div>
+</div>
+<div class="content">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>Canada</span></div>
+<h3>Étudier au Canada</h3>
+<p>Parcours structurés et dossier solide: choix du programme, admission, documents, stratégie de visa et suivi.</p>
+<div class="cta-row"><a class="btn accent" href="#contact">Projet Canada</a></div>
+</div>
+</div>
+<div class="card card-media">
+<div class="media">
+<img alt="Campus en France" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="flag">
+<img alt="Drapeau de la France" height="18" loading="lazy" src="assets/flags/fr.svg" width="24"/>
+<span>France</span>
+</div>
+</div>
+<div class="content">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>France</span></div>
+<h3>Étudier en France</h3>
+<p>Universités et écoles: orientation, dossier bien présenté, réponses plus rapides et suivi étape par étape.</p>
+<div class="cta-row"><a class="btn accent" href="#contact">Projet France</a></div>
+</div>
+</div>
+<div class="card card-media">
+<div class="media">
+<img alt="Étudiants en Italie" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="flag">
+<img alt="Drapeau de l’Italie" height="18" loading="lazy" src="assets/flags/it.svg" width="24"/>
+<span>Italie</span>
+</div>
+</div>
+<div class="content">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>Italie</span></div>
+<h3>Étudier en Italie</h3>
+<p>Langue italienne (B1/B2) et parcours académiques: sélection, inscription, suivi, et préparation du départ.</p>
+<div class="cta-row"><a class="btn accent" href="#contact">Projet Italie</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="process">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Méthode</div>
+<h2>Une méthode simple, une exécution premium. ✅</h2>
+<p class="sub">On avance avec précision. L’objectif: un dossier cohérent et une trajectoire claire.</p>
+</div>
+<div class="steps">
+<div class="step">
+<div class="num">1</div>
+<div><h3>Évaluation</h3><p>Âge, niveau, ville, destination, budget, rentrée: on fixe la bonne stratégie.</p></div>
+</div>
+<div class="step">
+<div class="num">2</div>
+<div><h3>Plan personnalisé</h3><p>Programmes, calendrier, checklist: vous savez quoi faire, et dans quel ordre.</p></div>
+</div>
+<div class="step">
+<div class="num">3</div>
+<div><h3>Admission &amp; suivi</h3><p>Préparation et dépôt du dossier d’admission, puis suivi jusqu’au retour.</p></div>
+</div>
+<div class="step">
+<div class="num">4</div>
+<div><h3>Contrôle qualité</h3><p>Organisation, cohérence, vérification: votre dossier gagne en crédibilité.</p></div>
+</div>
+<div class="step">
+<div class="num">5</div>
+<div><h3>Dernières étapes</h3><p>Plan final, conseils pratiques, préparation au départ: vous partez serein.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Contact</div>
+<h2 id="cms-contact-heading">Remplissez votre profil et nous vous rappelons.</h2>
+<p class="sub" id="cms-contact-sub">Indiquez votre nom, prénom et les informations clés (âge, niveau, ville, destination, budget, rentrée).</p>
+</div>
+<div class="contact-card">
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>WhatsApp</span></div>
+<h3>Message prêt</h3>
+<p class="muted" style="margin-top:10px; line-height:1.8;" id="cms-message-block">Bonjour New Journey Global Consulting, merci de me rappeler pour mon projet d’études à l’étranger.<br/><br/>
+<br/>
+            Nom:<br/>
+            Prénom:<br/>
+            Âge:<br/>
+            Niveau d’études:<br/>
+            Ville:<br/>
+            Destination (Canada/France/Italie):<br/>
+            Budget:<br/>
+            Rentrée (Janvier/Septembre):</p>
+<div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:10px;">
+<a class="btn primary" href="https://wa.me/21654101100?text=Bonjour%20New%20Journey%20Global%20Consulting%2C%20merci%20de%20me%20rappeler%20pour%20mon%20projet%20d%E2%80%99%C3%A9tudes%20%C3%A0%20l%E2%80%99%C3%A9tranger.%0A%0ANom%3A%0APr%C3%A9nom%3A%0A%C3%82ge%3A%0ANiveau%20d%E2%80%99%C3%A9tudes%3A%0AVille%3A%0ADestination%20%28Canada/France/Italie%29%3A%0ABudget%3A%0ARentr%C3%A9e%20%28Janvier/Septembre%29%3A" rel="noopener" target="_blank">Envoyer sur WhatsApp</a>
+<a class="btn" href="#top">Retour en haut</a>
+</div>
+</div>
+<div class="card">
+<div class="tag"><svg aria-hidden="true" class="ico"><use href="#i-doc"></use></svg><span>Sfax, Tunisie</span></div>
+<h3>Coordonnées</h3>
+<p class="muted">Contact direct, réponse rapide.</p>
+<div style="display:grid; gap:10px; margin-top:12px;">
+<div class="line"><strong>WhatsApp / Téléphone 1</strong> <span class="muted" id="cms-phone1">+216 54 101 100</span></div>
+<div class="line"><strong>Téléphone 2</strong> <span class="muted" id="cms-phone2">+216 55 629 627</span></div>
+<div class="line"><strong>Horaires</strong> <span class="muted" id="cms-hours">Lun–Ven | 9h–13h • 14h–17h</span></div><div class="line"><strong>Adresse</strong> <span class="muted" id="cms-address">Sfax, Tunisie</span></div>
+<div class="line"><strong>Site web</strong> <span class="muted" id="cms-siteweb">newjourneyglobalconsulting.com</span></div>
+<div class="line"><strong>Facebook</strong> <span class="muted"><a id="cms-facebook" href="https://www.facebook.com/newjourneyglobalconsul" target="_blank" rel="noopener">/newjourneyglobalconsul</a></span></div>
+<div class="line"><strong>Instagram</strong> <span class="muted"><a id="cms-instagram" href="https://www.instagram.com/new_journey_global_consulting/" target="_blank" rel="noopener">@new_journey_global_consulting</a></span></div>
+</div>
+<div style="margin-top:14px;">
+<a class="btn accent" href="https://wa.me/21654101100" rel="noopener" style="width:100%;" target="_blank">Ouvrir WhatsApp</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<div class="footer-inner">
+<div>© <span id="year"></span> New Journey Global Consulting. Tous droits réservés.</div>
+<div class="muted">Canada • France • Italie · <a href="https://www.facebook.com/newjourneyglobalconsul" rel="noopener" target="_blank">Facebook</a> · <a href="https://www.instagram.com/new_journey_global_consulting/" rel="noopener" target="_blank">Instagram</a></div>
+</div>
+</div>
+</footer>
+<a aria-label="Contacter sur WhatsApp" class="wa" href="https://wa.me/21654101100" rel="noopener" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.4A10 10 0 1 0 12 2z" opacity=".25"></path><path d="M8.7 7.7c.2-.5.4-.6.8-.6h.7c.2 0 .5.1.6.4l1.1 2.6c.1.3.1.5 0 .7l-.6 1c-.1.2-.1.4 0 .6.6 1.2 1.6 2.2 2.8 2.8.2.1.4.1.6 0l1-.6c.2-.1.4-.1.7 0l2.6 1.1c.3.1.4.4.4.6v.7c0 .4-.1.6-.6.8-.7.3-2.1.6-3.5 0-3.1-1.3-5.6-3.8-6.9-6.9-.6-1.4-.3-2.8 0-3.5z"></path></svg>
+<span>WhatsApp</span>
+</a>
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('menu');
+  btn?.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+  menu?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+(async function(){
+  try{
+    const res = await fetch('/content/site.json', {cache:'no-store'});
+    if(!res.ok) return;
+    const data = await res.json();
+
+    // Contact heading/sub
+    const h = document.getElementById('cms-contact-heading');
+    const s = document.getElementById('cms-contact-sub');
+    if(h && data.contact?.heading) h.textContent = data.contact.heading;
+    if(s && data.contact?.sub) s.textContent = data.contact.sub;
+
+    // Phones
+    const p1 = document.getElementById('cms-phone1');
+    const p2 = document.getElementById('cms-phone2');
+    if(p1 && data.phones?.[0]?.number) p1.textContent = data.phones[0].number;
+    if(p2 && data.phones?.[1]?.number) p2.textContent = data.phones[1].number;
+
+    // Hours / address / site
+    const hours = document.getElementById('cms-hours');
+    const addr = document.getElementById('cms-address');
+    const web = document.getElementById('cms-siteweb');
+    if(hours && data.hours) hours.textContent = data.hours;
+    if(addr && data.address) addr.textContent = data.address;
+    if(web && data.site_web) web.textContent = data.site_web;
+
+    // Socials
+    const fb = document.getElementById('cms-facebook');
+    const ig = document.getElementById('cms-instagram');
+    if(fb && data.social?.facebook_url){ fb.href = data.social.facebook_url; fb.textContent = data.social.facebook_label || 'Facebook'; }
+    if(ig && data.social?.instagram_url){ ig.href = data.social.instagram_url; ig.textContent = data.social.instagram_label || 'Instagram'; }
+
+    // Images
+    const imC = document.getElementById('cms-img-canada');
+    const imF = document.getElementById('cms-img-france');
+    const imI = document.getElementById('cms-img-italie');
+    if(imC && data.images?.destinations?.Canada) imC.src = data.images.destinations.Canada;
+    if(imF && data.images?.destinations?.France) imF.src = data.images.destinations.France;
+    if(imI && data.images?.destinations?.Italie) imI.src = data.images.destinations.Italie;
+
+    // Hero bg
+    if(data.images?.hero_bg){
+      document.documentElement.style.setProperty('--hero-bg', "url('" + data.images.hero_bg + "')");
+    }
+
+    // WhatsApp message template (build from fields)
+    const waLink1 = document.querySelector('a[href^="https://wa.me/21654101100?text="]');
+    if(waLink1 && data.phones?.[0]?.number){
+      const num = data.phones[0].number.replace(/\s+/g,'').replace('+','');
+      const intro = data.contact?.message_intro || '';
+      const lines = (data.contact?.fields || []).map(x => x + ':').join('\n');
+      const msg = intro + "\n\n" + lines;
+      waLink1.href = "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
+    }
+    const waOpen = document.querySelector('a.btn.accent[href^="https://wa.me/"]');
+    if(waOpen && data.phones?.[0]?.number){
+      const num = data.phones[0].number.replace(/\s+/g,'').replace('+','');
+      waOpen.href = "https://wa.me/" + num;
+    }
+
+    // Update message block preview
+    const msgBlock = document.getElementById('cms-message-block');
+    if(msgBlock){
+      const intro = data.contact?.message_intro || '';
+      const lines = (data.contact?.fields || []).map(x => x + ':').join('<br/>');
+      msgBlock.innerHTML = intro + '<br/><br/>' + lines;
+    }
+  }catch(e){
+    // silent
+  }
+})();
+</script>
+</body>
+</html>
